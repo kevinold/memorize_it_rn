@@ -22,7 +22,7 @@ import { createStore } from 'redux';
  */
 
 const start = {
-  count: '0',
+  count: 0,
 };
 
 const reduce = (state, action) => {
@@ -55,7 +55,7 @@ const App = connect(
         </Text>
         <TextInput
           style={{height: 40, borderColor: 'gray', borderWidth: 1}}
-          value={count}
+          value={count.toString()}
         />
       </View>
 
