@@ -5,6 +5,7 @@
 
 import React from 'react-native';
 import Button from 'react-native-button';
+import Utils from './lib/utils';
 const {
   AppRegistry,
   StyleSheet,
@@ -57,6 +58,10 @@ const App = connect(
           style={{height: 40, borderColor: 'gray', borderWidth: 1}}
           value={count.toString()}
         />
+
+        <Text>
+        Day {Utils.computeDay(count)}
+        </Text>
       </View>
 
       <View style={styles.buttonContainer}>
