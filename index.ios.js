@@ -28,7 +28,7 @@ const start = {
 
 const reduce = (state, action) => {
   switch (action.type) {
-    case 'CLICK':
+    case 'INCREMENT_COUNT':
       return {
         ...state,
         count: state.count + 1,
@@ -68,7 +68,7 @@ const App = connect(
 
         <Button
           style={styles.button}
-          onPress={() => dispatch({ type: 'CLICK' })}
+          onPress={() => dispatch({ type: 'INCREMENT_COUNT' })}
         >
         +
         </Button>
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
     marginRight: -325
   },
   button: {
-    fontSize: 100,
+    fontSize: 70,
     color: 'green'
   }
 });
